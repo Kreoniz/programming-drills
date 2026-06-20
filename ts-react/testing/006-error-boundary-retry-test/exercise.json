@@ -1,0 +1,21 @@
+{
+  "id": "ts-react/testing/006-error-boundary-retry-test",
+  "title": "Error Boundary Retry Test",
+  "language": "ts-react",
+  "track": "ts-react",
+  "topic": "testing",
+  "difficulty": "advanced",
+  "estimated_minutes": 40,
+  "tags": [
+    "react",
+    "testing",
+    "error-boundaries"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "node ../tests/check.mjs .",
+  "solution_check_command": "node ../tests/check.mjs .",
+  "prerequisites": []
+}

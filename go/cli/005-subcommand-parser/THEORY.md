@@ -1,0 +1,5 @@
+This drill adds practice around small CLI subcommand parsing without global state. It is intentionally small enough to finish in one sitting, but it mirrors a problem that appears inside larger production codebases. The goal is to make the contract obvious, implement it directly, and let the checks expose missed edge cases.
+
+Start by reading the tests or checker before changing the starter. Identify the observable behavior first: what input is valid, what output shape is expected, how errors are represented, and which decisions should remain stable for callers. For Go, prefer standard-library tools, explicit errors, small interfaces, and straightforward control flow. For TypeScript and React, prefer precise public types, deterministic render behavior, and configuration that makes package or runtime boundaries visible.
+
+Your solution does not need to match the reference line for line. It should pass the same checks and remain clear enough that you would be comfortable revisiting it after a month.

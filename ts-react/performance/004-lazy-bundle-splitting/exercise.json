@@ -1,0 +1,22 @@
+{
+  "id": "ts-react/performance/004-lazy-bundle-splitting",
+  "title": "Lazy Bundle Splitting",
+  "language": "ts-react",
+  "track": "ts-react",
+  "topic": "performance",
+  "difficulty": "advanced",
+  "estimated_minutes": 40,
+  "tags": [
+    "react",
+    "performance",
+    "lazy-loading",
+    "bundles"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "node ../tests/check.mjs .",
+  "solution_check_command": "node ../tests/check.mjs .",
+  "prerequisites": []
+}

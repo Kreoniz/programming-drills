@@ -1,0 +1,1 @@
+CREATE TABLE sales (product TEXT NOT NULL, qty INTEGER NOT NULL, unit_cents INTEGER NOT NULL);

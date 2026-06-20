@@ -1,0 +1,22 @@
+{
+  "id": "go/testing/005-benchmarks-string-builder",
+  "title": "Benchmarks and Allocation Pressure",
+  "language": "go",
+  "track": "go",
+  "topic": "testing",
+  "difficulty": "beginner+",
+  "estimated_minutes": 25,
+  "tags": [
+    "go",
+    "testing",
+    "benchmarks",
+    "performance"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "go test ./...",
+  "solution_check_command": "go test ./...",
+  "prerequisites": []
+}

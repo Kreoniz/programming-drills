@@ -1,0 +1,22 @@
+{
+  "id": "go/foundation/011-runes-initials",
+  "title": "Rune-Aware Initials",
+  "language": "go",
+  "track": "go",
+  "topic": "foundation",
+  "difficulty": "intermediate",
+  "estimated_minutes": 30,
+  "tags": [
+    "go",
+    "foundation",
+    "strings",
+    "unicode"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "go test ./...",
+  "solution_check_command": "go test ./...",
+  "prerequisites": []
+}

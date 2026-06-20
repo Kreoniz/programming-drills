@@ -1,0 +1,22 @@
+{
+  "id": "go/cli/004-structured-log-line",
+  "title": "Structured Log Line",
+  "language": "go",
+  "track": "go",
+  "topic": "cli",
+  "difficulty": "intermediate",
+  "estimated_minutes": 30,
+  "tags": [
+    "go",
+    "cli",
+    "logging",
+    "io"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "go test ./...",
+  "solution_check_command": "go test ./...",
+  "prerequisites": []
+}

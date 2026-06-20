@@ -1,0 +1,21 @@
+{
+  "id": "shell-tools/sqlite3/003-window-ranking",
+  "title": "sqlite3 Window Ranking",
+  "language": "shell",
+  "track": "shell-tools",
+  "topic": "sqlite3",
+  "difficulty": "intermediate",
+  "estimated_minutes": 25,
+  "tags": [
+    "sqlite3",
+    "sql",
+    "window-functions"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "node ../tests/check.mjs .",
+  "solution_check_command": "node ../tests/check.mjs .",
+  "prerequisites": []
+}

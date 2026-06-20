@@ -1,0 +1,21 @@
+{
+  "id": "shell-tools/awk/002-status-classes",
+  "title": "Count HTTP Status Classes",
+  "language": "shell",
+  "track": "shell-tools",
+  "topic": "awk",
+  "difficulty": "intermediate",
+  "estimated_minutes": 25,
+  "tags": [
+    "awk",
+    "logs",
+    "aggregation"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "node ../tests/check.mjs .",
+  "solution_check_command": "node ../tests/check.mjs .",
+  "prerequisites": []
+}

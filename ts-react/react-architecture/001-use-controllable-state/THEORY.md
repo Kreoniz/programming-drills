@@ -1,0 +1,5 @@
+This drill focuses on controlled/uncontrolled React state APIs and stable setter semantics. The point is to practice the smallest useful version of the idea, then let the tests force precision. In production code, this skill usually appears inside larger features, where a vague understanding is not enough: edge cases, naming, and failure behavior become part of the API.
+
+Read the starter code before writing anything. Notice the public function or type that the tests exercise, the values that are considered invalid, and the shape of the expected result. Keep the implementation direct at first. For Go drills, prefer clear control flow, small helpers, and ordinary standard-library tools. For TypeScript and React drills, prefer explicit types and observable behavior over cleverness that hides the contract.
+
+The reference solution is intentionally small. Your version does not need to match it exactly, but it should satisfy the same contract and remain easy to change after the test passes.

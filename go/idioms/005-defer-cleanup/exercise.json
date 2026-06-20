@@ -1,0 +1,22 @@
+{
+  "id": "go/idioms/005-defer-cleanup",
+  "title": "Defer for Cleanup",
+  "language": "go",
+  "track": "go",
+  "topic": "idioms",
+  "difficulty": "intermediate",
+  "estimated_minutes": 25,
+  "tags": [
+    "go",
+    "idioms",
+    "defer",
+    "cleanup"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "go test ./...",
+  "solution_check_command": "go test ./...",
+  "prerequisites": []
+}

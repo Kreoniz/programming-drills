@@ -1,0 +1,16 @@
+{
+  "name": "programming-drill-system",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.4.0",
+  "scripts": {
+    "drill:list": "node tools/drill-runner.mjs list",
+    "drill:check": "node tools/drill-runner.mjs check",
+    "drill:check:go": "node tools/drill-runner.mjs check go --solution",
+    "drill:check:ts": "node tools/drill-runner.mjs check ts-react --solution",
+    "drill:check:shell": "node tools/drill-runner.mjs check shell-tools --solution",
+    "drill:verify": "node tools/verify-drills.mjs",
+    "drill:verify:starters": "node tools/verify-drills.mjs --check-starters"
+  }
+}

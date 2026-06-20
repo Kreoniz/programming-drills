@@ -1,0 +1,22 @@
+{
+  "id": "go/testing/003-test-helpers-normalize-tags",
+  "title": "Test Helpers and Normalized Tags",
+  "language": "go",
+  "track": "go",
+  "topic": "testing",
+  "difficulty": "beginner+",
+  "estimated_minutes": 25,
+  "tags": [
+    "go",
+    "testing",
+    "helpers",
+    "slices"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "go test ./...",
+  "solution_check_command": "go test ./...",
+  "prerequisites": []
+}

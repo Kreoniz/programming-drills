@@ -1,0 +1,5 @@
+{
+  "name": "@acme/ui",
+  "main": "dist/index.cjs",
+  "sideEffects": true
+}

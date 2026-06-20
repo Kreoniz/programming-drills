@@ -1,0 +1,7 @@
+{
+  "rules": [
+    { "from": "packages/*", "disallow": ["apps/*"] },
+    { "from": "apps/*", "allow": ["packages/*"] },
+    { "from": "*", "disallow": ["packages/*/src/internal/*"] }
+  ]
+}

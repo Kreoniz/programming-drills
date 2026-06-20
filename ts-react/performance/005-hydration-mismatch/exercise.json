@@ -1,0 +1,21 @@
+{
+  "id": "ts-react/performance/005-hydration-mismatch",
+  "title": "Hydration Mismatch Debugging",
+  "language": "ts-react",
+  "track": "ts-react",
+  "topic": "performance",
+  "difficulty": "advanced",
+  "estimated_minutes": 40,
+  "tags": [
+    "react",
+    "ssr",
+    "hydration"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "node ../tests/check.mjs .",
+  "solution_check_command": "node ../tests/check.mjs .",
+  "prerequisites": []
+}

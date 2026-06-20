@@ -1,0 +1,21 @@
+{
+  "id": "ts-react/rspack/002-federation-remote",
+  "title": "Rspack Federation Remote",
+  "language": "ts-react",
+  "track": "ts-react",
+  "topic": "rspack",
+  "difficulty": "advanced",
+  "estimated_minutes": 40,
+  "tags": [
+    "rspack",
+    "module-federation",
+    "microfrontends"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "node ../tests/check.mjs .",
+  "solution_check_command": "node ../tests/check.mjs .",
+  "prerequisites": []
+}

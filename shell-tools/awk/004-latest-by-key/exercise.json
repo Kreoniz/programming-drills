@@ -1,0 +1,21 @@
+{
+  "id": "shell-tools/awk/004-latest-by-key",
+  "title": "Latest Record by Key",
+  "language": "shell",
+  "track": "shell-tools",
+  "topic": "awk",
+  "difficulty": "intermediate",
+  "estimated_minutes": 25,
+  "tags": [
+    "awk",
+    "dedupe",
+    "records"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "node ../tests/check.mjs .",
+  "solution_check_command": "node ../tests/check.mjs .",
+  "prerequisites": []
+}

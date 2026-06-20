@@ -1,0 +1,21 @@
+{
+  "id": "go/foundation/004-pointers-mutation",
+  "title": "Pointers and Intentional Mutation",
+  "language": "go",
+  "track": "go",
+  "topic": "foundation",
+  "difficulty": "beginner",
+  "estimated_minutes": 25,
+  "tags": [
+    "go",
+    "foundation",
+    "pointers"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "go test ./...",
+  "solution_check_command": "go test ./...",
+  "prerequisites": []
+}

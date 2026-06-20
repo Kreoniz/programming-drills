@@ -1,0 +1,22 @@
+{
+  "id": "shell-tools/xargs/001-null-safe-todos",
+  "title": "Null-Safe TODO Search",
+  "language": "shell",
+  "track": "shell-tools",
+  "topic": "xargs",
+  "difficulty": "intermediate",
+  "estimated_minutes": 25,
+  "tags": [
+    "xargs",
+    "null-delimited",
+    "filenames",
+    "rg"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "node ../tests/check.mjs .",
+  "solution_check_command": "node ../tests/check.mjs .",
+  "prerequisites": []
+}

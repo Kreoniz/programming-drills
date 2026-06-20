@@ -1,0 +1,21 @@
+{
+  "id": "ts-react/bundlers/002-tree-shaking-side-effects",
+  "title": "Tree Shaking and Side Effects",
+  "language": "ts-react",
+  "track": "ts-react",
+  "topic": "bundlers",
+  "difficulty": "advanced",
+  "estimated_minutes": 40,
+  "tags": [
+    "bundlers",
+    "tree-shaking",
+    "package-json"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "node ../tests/check.mjs .",
+  "solution_check_command": "node ../tests/check.mjs .",
+  "prerequisites": []
+}

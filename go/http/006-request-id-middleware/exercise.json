@@ -1,0 +1,22 @@
+{
+  "id": "go/http/006-request-id-middleware",
+  "title": "Request ID Middleware",
+  "language": "go",
+  "track": "go",
+  "topic": "http",
+  "difficulty": "intermediate+",
+  "estimated_minutes": 30,
+  "tags": [
+    "go",
+    "http",
+    "middleware",
+    "context"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "go test ./...",
+  "solution_check_command": "go test ./...",
+  "prerequisites": []
+}

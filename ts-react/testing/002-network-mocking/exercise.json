@@ -1,0 +1,22 @@
+{
+  "id": "ts-react/testing/002-network-mocking",
+  "title": "Network Mocking Contracts",
+  "language": "ts-react",
+  "track": "ts-react",
+  "topic": "testing",
+  "difficulty": "advanced",
+  "estimated_minutes": 40,
+  "tags": [
+    "react",
+    "testing",
+    "network-mocking",
+    "msw"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "node ../tests/check.mjs .",
+  "solution_check_command": "node ../tests/check.mjs .",
+  "prerequisites": []
+}

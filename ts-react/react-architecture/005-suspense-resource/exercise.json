@@ -1,0 +1,21 @@
+{
+  "id": "ts-react/react-architecture/005-suspense-resource",
+  "title": "Suspense Resource Contract",
+  "language": "ts-react",
+  "track": "ts-react",
+  "topic": "react-architecture",
+  "difficulty": "advanced",
+  "estimated_minutes": 40,
+  "tags": [
+    "react",
+    "suspense",
+    "async-ui"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "node ../tests/check.mjs .",
+  "solution_check_command": "node ../tests/check.mjs .",
+  "prerequisites": []
+}

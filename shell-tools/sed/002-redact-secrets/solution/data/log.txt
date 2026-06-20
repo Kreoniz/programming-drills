@@ -1,0 +1,3 @@
+user=ada password=hunter2 action=login
+token=abc123 status=ok
+api_key=secret-value region=us

@@ -1,0 +1,21 @@
+{
+  "id": "ts-react/webpack/002-loader-plugin-order",
+  "title": "Webpack Loader and Plugin Order",
+  "language": "ts-react",
+  "track": "ts-react",
+  "topic": "webpack",
+  "difficulty": "advanced",
+  "estimated_minutes": 40,
+  "tags": [
+    "webpack",
+    "loaders",
+    "plugins"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "node ../tests/check.mjs .",
+  "solution_check_command": "node ../tests/check.mjs .",
+  "prerequisites": []
+}

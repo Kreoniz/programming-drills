@@ -1,0 +1,13 @@
+{
+  "name": "reports",
+  "remoteEntry": "https://cdn.example.com/reports/remoteEntry.js",
+  "exposes": {
+    "./Widget": "./src/Widget",
+    "./routes": "./src/routes"
+  },
+  "shared": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "healthCheck": "https://cdn.example.com/reports/health.json"
+}

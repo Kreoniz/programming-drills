@@ -1,0 +1,22 @@
+{
+  "id": "shell-tools/rg/001-todo-audit",
+  "title": "ripgrep TODO Audit",
+  "language": "shell",
+  "track": "shell-tools",
+  "topic": "rg",
+  "difficulty": "intermediate",
+  "estimated_minutes": 25,
+  "tags": [
+    "rg",
+    "ripgrep",
+    "search",
+    "globs"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "node ../tests/check.mjs .",
+  "solution_check_command": "node ../tests/check.mjs .",
+  "prerequisites": []
+}

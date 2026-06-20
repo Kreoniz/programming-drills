@@ -1,0 +1,6 @@
+GET / 200 12
+GET /login 302 5
+POST /login 401 9
+GET /missing 404 3
+GET /api 200 20
+POST /api 500 30

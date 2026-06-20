@@ -1,0 +1,6 @@
+service,cost
+api,10
+web,5
+api,7
+worker,3
+web,3

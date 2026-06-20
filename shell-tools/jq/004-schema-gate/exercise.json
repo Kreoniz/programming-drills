@@ -1,0 +1,22 @@
+{
+  "id": "shell-tools/jq/004-schema-gate",
+  "title": "JSON Shape Gate",
+  "language": "shell",
+  "track": "shell-tools",
+  "topic": "jq",
+  "difficulty": "intermediate",
+  "estimated_minutes": 25,
+  "tags": [
+    "jq",
+    "json",
+    "validation",
+    "ci"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "node ../tests/check.mjs .",
+  "solution_check_command": "node ../tests/check.mjs .",
+  "prerequisites": []
+}

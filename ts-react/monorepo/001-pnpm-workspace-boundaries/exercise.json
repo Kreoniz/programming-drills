@@ -1,0 +1,21 @@
+{
+  "id": "ts-react/monorepo/001-pnpm-workspace-boundaries",
+  "title": "pnpm Workspace Boundaries",
+  "language": "ts-react",
+  "track": "ts-react",
+  "topic": "monorepo",
+  "difficulty": "advanced",
+  "estimated_minutes": 40,
+  "tags": [
+    "monorepo",
+    "pnpm",
+    "package-boundaries"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "node ../tests/check.mjs .",
+  "solution_check_command": "node ../tests/check.mjs .",
+  "prerequisites": []
+}

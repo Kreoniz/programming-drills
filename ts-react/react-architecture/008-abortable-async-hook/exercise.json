@@ -1,0 +1,22 @@
+{
+  "id": "ts-react/react-architecture/008-abortable-async-hook",
+  "title": "Abortable Async Hook",
+  "language": "ts-react",
+  "track": "ts-react",
+  "topic": "react-architecture",
+  "difficulty": "advanced",
+  "estimated_minutes": 40,
+  "tags": [
+    "react",
+    "hooks",
+    "async-ui",
+    "abortcontroller"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "node ../tests/check.mjs .",
+  "solution_check_command": "node ../tests/check.mjs .",
+  "prerequisites": []
+}

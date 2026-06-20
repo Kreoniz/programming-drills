@@ -1,0 +1,22 @@
+{
+  "id": "go/idioms/002-error-wrapping",
+  "title": "Wrapping Sentinel Errors",
+  "language": "go",
+  "track": "go",
+  "topic": "idioms",
+  "difficulty": "beginner+",
+  "estimated_minutes": 25,
+  "tags": [
+    "go",
+    "idioms",
+    "errors",
+    "wrapping"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "go test ./...",
+  "solution_check_command": "go test ./...",
+  "prerequisites": []
+}

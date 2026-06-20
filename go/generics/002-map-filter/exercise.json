@@ -1,0 +1,21 @@
+{
+  "id": "go/generics/002-map-filter",
+  "title": "Generic Map and Filter",
+  "language": "go",
+  "track": "go",
+  "topic": "generics",
+  "difficulty": "intermediate",
+  "estimated_minutes": 25,
+  "tags": [
+    "go",
+    "generics",
+    "slices"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "go test ./...",
+  "solution_check_command": "go test ./...",
+  "prerequisites": []
+}

@@ -1,0 +1,21 @@
+{
+  "id": "ts-react/typescript-deep-dive/002-mapped-readonly-except",
+  "title": "Mapped Types with Readonly Exceptions",
+  "language": "ts-react",
+  "track": "ts-react",
+  "topic": "typescript-deep-dive",
+  "difficulty": "advanced",
+  "estimated_minutes": 35,
+  "tags": [
+    "typescript",
+    "mapped-types",
+    "readonly"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "tsc -p .",
+  "solution_check_command": "tsc -p .",
+  "prerequisites": []
+}
