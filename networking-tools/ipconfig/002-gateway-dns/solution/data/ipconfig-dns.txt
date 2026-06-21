@@ -1,0 +1,8 @@
+Wireless LAN adapter Wi-Fi:
+   DNS Servers . . . . . . . . . . . : 1.1.1.1
+                                       8.8.8.8
+   Default Gateway . . . . . . . . . : 10.0.0.1
+
+Ethernet adapter Lab:
+   DNS Servers . . . . . . . . . . . : 192.168.50.2
+   Default Gateway . . . . . . . . . :

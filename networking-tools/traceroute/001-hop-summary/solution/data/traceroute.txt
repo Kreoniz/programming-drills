@@ -1,0 +1,5 @@
+traceroute to example.com (93.184.216.34), 30 hops max
+ 1  router.local (192.168.10.1)  1.123 ms  1.210 ms
+ 2  * * *
+ 3  edge.example.net (203.0.113.1)  12.000 ms  12.400 ms
+ 4  example.com (93.184.216.34)  20.000 ms  20.100 ms

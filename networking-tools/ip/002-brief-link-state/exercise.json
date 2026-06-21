@@ -1,0 +1,22 @@
+{
+  "id": "networking-tools/ip/002-brief-link-state",
+  "title": "ip Brief Link State",
+  "language": "networking",
+  "track": "networking-tools",
+  "topic": "ip",
+  "difficulty": "intermediate",
+  "estimated_minutes": 25,
+  "tags": [
+    "ip",
+    "iproute2",
+    "interfaces",
+    "awk"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "node ../tests/check.mjs .",
+  "solution_check_command": "node ../tests/check.mjs .",
+  "prerequisites": []
+}

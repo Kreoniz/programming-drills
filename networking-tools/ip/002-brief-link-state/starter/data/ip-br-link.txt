@@ -1,0 +1,4 @@
+lo               UNKNOWN        00:00:00:00:00:00 <LOOPBACK,UP,LOWER_UP>
+enp1s0           UP             52:54:00:12:34:56 <BROADCAST,MULTICAST,UP,LOWER_UP>
+wlp2s0           DOWN           70:1c:e7:aa:bb:cc <BROADCAST,MULTICAST>
+docker0          DOWN           02:42:ac:11:00:01 <NO-CARRIER,BROADCAST,MULTICAST,UP>

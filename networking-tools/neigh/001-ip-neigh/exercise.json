@@ -1,0 +1,22 @@
+{
+  "id": "networking-tools/neigh/001-ip-neigh",
+  "title": "Neighbor Table States",
+  "language": "networking",
+  "track": "networking-tools",
+  "topic": "neigh",
+  "difficulty": "intermediate",
+  "estimated_minutes": 25,
+  "tags": [
+    "ip",
+    "neigh",
+    "arp",
+    "layer2"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "node ../tests/check.mjs .",
+  "solution_check_command": "node ../tests/check.mjs .",
+  "prerequisites": []
+}

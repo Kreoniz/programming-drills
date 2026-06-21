@@ -1,0 +1,5 @@
+DEVICE  TYPE      STATE                   CONNECTION
+enp1s0  ethernet  connected               Wired connection 1
+wlp2s0  wifi      connected               Corp WiFi
+lo      loopback  connected (externally)  lo
+docker0 bridge    unmanaged               --

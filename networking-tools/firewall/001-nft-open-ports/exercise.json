@@ -1,0 +1,22 @@
+{
+  "id": "networking-tools/firewall/001-nft-open-ports",
+  "title": "nftables Open TCP Ports",
+  "language": "networking",
+  "track": "networking-tools",
+  "topic": "firewall",
+  "difficulty": "intermediate",
+  "estimated_minutes": 25,
+  "tags": [
+    "nft",
+    "firewall",
+    "ports",
+    "sed"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "node ../tests/check.mjs .",
+  "solution_check_command": "node ../tests/check.mjs .",
+  "prerequisites": []
+}

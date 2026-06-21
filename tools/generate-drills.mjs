@@ -4721,7 +4721,7 @@ function runnerSource() {
     import { fileURLToPath } from "node:url";
 
     const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-    const trackRoots = ["go", "ts-react", "shell-tools"];
+    const trackRoots = ["go", "ts-react", "shell-tools", "networking-tools"];
     const goCache = path.join(root, ".cache", "go-build");
     const goTmp = path.join(root, ".cache", "go-tmp");
     mkdirSync(goCache, { recursive: true });
@@ -4768,6 +4768,8 @@ function runnerSource() {
         "  pnpm drill:check <exercise-id|prefix> [--solution|--starter]",
         "  pnpm drill:check go --solution",
         "  pnpm drill:check ts-react --solution",
+        "  pnpm drill:check shell-tools --solution",
+        "  pnpm drill:check networking-tools --solution",
         "  pnpm drill:verify",
       ].join("\\n"));
     }
@@ -4832,7 +4834,7 @@ function verifierSource() {
     import { fileURLToPath } from "node:url";
 
     const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-    const trackRoots = ["go", "ts-react", "shell-tools"];
+    const trackRoots = ["go", "ts-react", "shell-tools", "networking-tools"];
     const checkStarters = process.argv.includes("--check-starters");
     const goCache = path.join(root, ".cache", "go-build");
     const goTmp = path.join(root, ".cache", "go-tmp");
@@ -4939,6 +4941,7 @@ function verifierSource() {
     report.totals.go = exercises.filter(e => e.meta.language === "go").length;
     report.totals.tsReact = exercises.filter(e => e.meta.language === "ts-react").length;
     report.totals.shellTools = exercises.filter(e => e.meta.language === "shell").length;
+    report.totals.networkingTools = exercises.filter(e => e.meta.language === "networking").length;
     report.totals.failures = report.failures.length;
     writeFileSync(path.join(root, "tools", "verify-report.json"), JSON.stringify(report, null, 2) + "\\n");
 
@@ -4950,7 +4953,7 @@ function verifierSource() {
       process.exit(1);
     }
 
-    console.log(\`Verified \${report.totals.exercises} drills: \${report.totals.go} Go, \${report.totals.tsReact} TS/React, \${report.totals.shellTools} shell-tools.\`);
+    console.log(\`Verified \${report.totals.exercises} drills: \${report.totals.go} Go, \${report.totals.tsReact} TS/React, \${report.totals.shellTools} shell-tools, \${report.totals.networkingTools} networking-tools.\`);
     if (checkStarters) console.log("Starter checks were run and failed as expected.");
   `;
 }
@@ -4968,6 +4971,7 @@ function packageJSON() {
       "drill:check:go": "node tools/drill-runner.mjs check go --solution",
       "drill:check:ts": "node tools/drill-runner.mjs check ts-react --solution",
       "drill:check:shell": "node tools/drill-runner.mjs check shell-tools --solution",
+      "drill:check:net": "node tools/drill-runner.mjs check networking-tools --solution",
       "drill:verify": "node tools/verify-drills.mjs",
       "drill:verify:starters": "node tools/verify-drills.mjs --check-starters"
     }
@@ -4980,11 +4984,12 @@ function readme() {
 
     This repository is a self-contained drill pack for practical Go foundations and advanced TypeScript/React engineering. It is not a tutorial-only repo: every drill has brief theory, a focused task, starter code with TODOs, automated checks, progressive hints, and a reference solution used by the verifier.
 
-    Current size: 143 drills total, with 61 Go drills, 58 TypeScript/React drills, and 24 shell-tools drills.
+    Current size: 168 drills total, with 61 Go drills, 58 TypeScript/React drills, 24 shell-tools drills, and 25 networking-tools drills.
 
     ## Setup
     - Required locally: Go 1.22+ and Node 20+.
     - Required for shell-tools drills: \`rg\`, GNU \`sed\`, GNU \`awk\`, \`jq\`, GNU \`xargs\`, and \`sqlite3\`.
+    - Required for networking-tools drills: common Linux networking utilities such as \`ip\`, \`ifconfig\`, \`ss\`, \`curl\`, \`tcpdump\`, \`awk\`, \`sed\`, and \`jq\`. The drills use local fixtures, so root and live network access are not required.
     - Recommended: pnpm. This workspace uses pnpm scripts but has no required runtime install for the generated checkers.
     - Optional for extending React runtime tests: add Vitest, React Testing Library, and React type packages when you want to turn static drills into executable app tests.
 
@@ -4997,17 +5002,18 @@ function readme() {
     - Run all Go reference checks: \`pnpm drill:check:go\`
     - Run all TS/React reference checks: \`pnpm drill:check:ts\`
     - Run all shell-tools reference checks: \`pnpm drill:check:shell\`
+    - Run all networking-tools reference checks: \`pnpm drill:check:net\`
 
-    Inside a Go exercise you can also run \`go test ./...\`. Inside a type-level TS exercise you can run \`tsc -p .\`. Inside a static TS/React or shell-tools exercise you can run \`node ../tests/check.mjs .\`. If your pnpm installation tries to auto-install before running scripts, use \`pnpm_config_verify_deps_before_run=false pnpm drill:list\` or call the runner directly with \`node tools/drill-runner.mjs list\`.
+    Inside a Go exercise you can also run \`go test ./...\`. Inside a type-level TS exercise you can run \`tsc -p .\`. Inside a static TS/React, shell-tools, or networking-tools exercise you can run \`node ../tests/check.mjs .\`. If your pnpm installation tries to auto-install before running scripts, use \`pnpm_config_verify_deps_before_run=false pnpm drill:list\` or call the runner directly with \`node tools/drill-runner.mjs list\`.
 
     ## How To Practice
     Pick one exercise, open its \`TASK.md\`, read \`THEORY.md\`, then edit files only under \`starter/\`. Run the root check command until it passes. Use \`HINTS.md\` progressively when stuck. Avoid reading \`solution/\` until after you finish or deliberately want to compare approaches.
 
     ## Recommended Study Path
-    Start Go in order: \`go/foundation\`, \`go/idioms\`, \`go/testing\`, \`go/concurrency\`, then the practical HTTP, CLI, generics, and architecture drills. Start TS/React with \`typescript-deep-dive\`, then React architecture, performance, testing, bundlers, microfrontends, monorepo, and design-systems. Start shell-tools with \`shell-tools/rg\`, then \`sed\`, \`awk\`, \`jq\`, \`xargs\`, and \`sqlite3\`.
+    Start Go in order: \`go/foundation\`, \`go/idioms\`, \`go/testing\`, \`go/concurrency\`, then the practical HTTP, CLI, generics, and architecture drills. Start TS/React with \`typescript-deep-dive\`, then React architecture, performance, testing, bundlers, microfrontends, monorepo, and design-systems. Start shell-tools with \`shell-tools/rg\`, then \`sed\`, \`awk\`, \`jq\`, \`xargs\`, and \`sqlite3\`. Start networking with \`networking-tools/ip\`, then \`ifconfig\`, \`ipconfig\`, \`ss\`, DNS, ping/traceroute, curl, tcpdump, neighbor tables, firewall output, NetworkManager, ethtool, and sysctl.
 
     ## How Tracks Differ
-    Go drills are mostly executable packages with Go unit tests, table-driven tests, benchmarks, fuzz targets, concurrency tests, and standard-library APIs. TS/React drills assume you already know ordinary React and TypeScript. Many use compile-time type tests or static engineering checks for architecture, bundler, federation, and test-code tasks where installing a full app would add noise. Shell-tools drills use local fixtures and exact-output command checks for practical \`rg\`, \`sed\`, \`awk\`, \`jq\`, \`xargs\`, and \`sqlite3\` pipelines.
+    Go drills are mostly executable packages with Go unit tests, table-driven tests, benchmarks, fuzz targets, concurrency tests, and standard-library APIs. TS/React drills assume you already know ordinary React and TypeScript. Many use compile-time type tests or static engineering checks for architecture, bundler, federation, and test-code tasks where installing a full app would add noise. Shell-tools drills use local fixtures and exact-output command checks for practical \`rg\`, \`sed\`, \`awk\`, \`jq\`, \`xargs\`, and \`sqlite3\` pipelines. Networking-tools drills use fixture-driven checks to practice command output from host, DNS, routing, sockets, packet, firewall, and link-layer utilities without touching the live network.
 
     ## Troubleshooting
     If \`pnpm drill:verify\` fails, open \`tools/verify-report.json\` for the exact drill and phase. If \`tsc\` is missing, install TypeScript locally or use a Node version that has access to \`tsc\`. If a starter check fails, that is expected until you implement the TODOs. If a solution check fails, the drill library itself is broken and should be fixed before practicing that exercise.
@@ -5025,6 +5031,7 @@ function agents() {
     - \`go/\`: Go drill tracks from foundation through architecture.
     - \`ts-react/\`: advanced TypeScript, React architecture, performance, testing, bundlers, microfrontends, monorepo, and design-system drills.
     - \`shell-tools/\`: command-line drills for \`rg\`, \`sed\`, \`awk\`, \`jq\`, \`xargs\`, and \`sqlite3\`.
+    - \`networking-tools/\`: networking drills for \`ip\`, \`ifconfig\`, \`ipconfig\`, \`ss\`, DNS, ping/traceroute, curl, tcpdump, neighbor tables, firewall output, NetworkManager, ethtool, and sysctl.
     - \`tools/\`: drill runner, verifier, generated reports, and authoring helpers.
     - \`docs/\`: roadmaps and authoring/checking documentation.
     - Root docs: \`README.md\`, \`backlog.md\`, and \`TOMORROW.md\`.
@@ -5039,6 +5046,7 @@ function agents() {
     - \`pnpm drill:verify\`
     - \`pnpm drill:verify:starters\`
     - \`pnpm drill:check:shell\`
+    - \`pnpm drill:check:net\`
 
     ## Validation Requirements
     The verifier checks metadata shape, required files, theory length, checker presence, and all reference solution commands. It writes \`tools/verify-report.json\` and exits nonzero on broken drills.
@@ -5082,12 +5090,21 @@ function docs() {
 
       For each drill, inspect the fixture files, edit \`starter/task.sh\` or \`starter/query.sql\`, and run \`node tools/drill-runner.mjs check <id>\`.
     `,
+    "docs/networking-tools-roadmap.md": text`
+      # Networking Tools Roadmap
+
+      This track builds operational fluency with Linux and cross-platform networking utilities through fixture-driven drills. Start with \`networking-tools/ip\`: address JSON output, link state, default routes, and \`ip route get\` are the fastest way to understand how a host chooses an interface and source address.
+
+      Move through \`ifconfig\` and \`ipconfig\` to read legacy Linux and Windows output without confusing adapter names, loopback entries, gateways, DNS servers, or disconnected interfaces. Then use \`ss\`, DNS, ping, and traceroute drills to practice service listening state, resolver configuration, answer sections, hosts-file overrides, packet loss, and hop summaries.
+
+      The later drills focus on production-style diagnosis: \`curl --write-out\` timings, response headers, tcpdump line parsing, neighbor table states, nftables and iptables summaries, NetworkManager status, ethtool link speed/duplex, and sysctl forwarding flags. The checks use local text or JSON fixtures, so commands are deterministic and safe. After passing each drill, compare your parsing choices with the solution and think about which parts would break against real output variations.
+    `,
     "docs/how-checking-works.md": text`
       # How Checking Works
 
-      The root runner discovers every \`exercise.json\` under \`go/\`, \`ts-react/\`, and \`shell-tools/\`. A starter check runs \`check_command\` from the exercise's \`starter/\` directory. A reference check runs \`solution_check_command\` from \`solution/\`.
+      The root runner discovers every \`exercise.json\` under \`go/\`, \`ts-react/\`, \`shell-tools/\`, and \`networking-tools/\`. A starter check runs \`check_command\` from the exercise's \`starter/\` directory. A reference check runs \`solution_check_command\` from \`solution/\`.
 
-      Go drills use \`go test ./...\` inside an isolated module. Type-level TypeScript drills use \`tsc -p .\` with compile-time assertions. Architecture and tooling drills use local Node checkers in \`tests/check.mjs\` to inspect the intended source/config files for required engineering decisions. Shell-tools drills use local fixtures plus \`tests/check.mjs\` to execute \`task.sh\` or \`query.sql\` wrappers and compare exact stdout.
+      Go drills use \`go test ./...\` inside an isolated module. Type-level TypeScript drills use \`tsc -p .\` with compile-time assertions. Architecture and tooling drills use local Node checkers in \`tests/check.mjs\` to inspect the intended source/config files for required engineering decisions. Shell-tools drills use local fixtures plus \`tests/check.mjs\` to execute \`task.sh\` or \`query.sql\` wrappers and compare exact stdout. Networking-tools drills also use fixtures, which means you practice parsing \`ip\`, \`ifconfig\`, \`ipconfig\`, \`ss\`, DNS, curl, tcpdump, firewall, and sysctl output without requiring root or live network access.
 
       \`pnpm drill:verify\` scans metadata, required files, theory word counts, checker presence, and all reference solutions. \`pnpm drill:verify:starters\` additionally checks that starters fail, which protects against accidentally solved starter code.
     `,
@@ -5112,10 +5129,12 @@ function backlog() {
     - Authored 61 Go drills across foundation, idioms, testing, concurrency, HTTP, CLI, generics, and architecture.
     - Authored 58 TS/React drills across advanced TypeScript, React architecture, performance, testing, webpack, Rspack, Vite/bundlers, microfrontends, monorepo, and design systems.
     - Authored 24 shell-tools drills across \`rg\`, \`sed\`, \`awk\`, \`jq\`, \`xargs\`, and \`sqlite3\`.
+    - Authored 25 networking-tools drills across \`ip\`, \`ifconfig\`, \`ipconfig\`, \`ss\`, DNS, ping/traceroute, curl, tcpdump, neighbor tables, firewall output, NetworkManager, ethtool, and sysctl.
     - Added reference solutions and automated checks for every drill.
     - Added \`tools/generate-extra-drills.mjs\` to keep the expansion reproducible.
     - Added \`tools/generate-shell-drills.mjs\` and made \`shell-tools/\` a first-class runner/verifier track.
-    - Ran \`node tools/verify-drills.mjs\`: all 143 reference solutions passed.
+    - Added \`tools/generate-networking-drills.mjs\` and made \`networking-tools/\` a first-class runner/verifier track.
+    - Ran \`node tools/verify-drills.mjs\`: all 168 reference solutions passed.
     - Ran \`node tools/verify-drills.mjs --check-starters\`: all starters failed as expected.
 
     ## Validation Notes
@@ -5129,6 +5148,7 @@ function backlog() {
     - Add Playwright-based UI flow drills.
     - Add bundle-analysis artifacts for webpack/Rspack/Vite exercises.
     - Add spaced-repetition study schedules based on completed drills.
+    - Add packet-capture interpretation drills for ARP, TLS handshakes, and HTTP/2 once richer fixtures are available.
   `;
 }
 
@@ -5136,18 +5156,20 @@ function tomorrow() {
   return text`
     # TOMORROW
 
-    1. Run \`pnpm drill:list\` to scan the 143-drill library. If pnpm tries to auto-install first, use \`pnpm_config_verify_deps_before_run=false pnpm drill:list\` or \`node tools/drill-runner.mjs list\`.
+    1. Run \`pnpm drill:list\` to scan the 168-drill library. If pnpm tries to auto-install first, use \`pnpm_config_verify_deps_before_run=false pnpm drill:list\` or \`node tools/drill-runner.mjs list\`.
     2. Start with \`go/foundation/001-zero-values\` if you want Go fundamentals.
     3. Start with \`ts-react/typescript-deep-dive/001-conditional-api-data\` if you want advanced TS/React.
     4. For each drill, read \`THEORY.md\`, then \`TASK.md\`, edit only \`starter/\`, and run \`pnpm drill:check <id>\`.
     5. Use \`HINTS.md\` before opening \`solution/\`.
     6. Start with \`shell-tools/rg/001-todo-audit\` if you want command-line search and data-processing practice.
-    7. Run \`pnpm drill:verify\` when you want to confirm the reference library is still healthy.
+    7. Start with \`networking-tools/ip/001-ip-json-addresses\` if you want Linux networking utility practice.
+    8. Run \`pnpm drill:verify\` when you want to confirm the reference library is still healthy.
 
     Recommended first overnight set:
     - Go: foundation 001-006, idioms 001-003, testing 001.
     - TS/React: TypeScript deep dive 001-004, React architecture 001, performance 001.
     - Shell tools: rg 001-002, sed 001, awk 001, jq 001, xargs 001, sqlite3 001.
+    - Networking tools: ip 001-004, ifconfig 001, ss 001, DNS 001, curl 001.
   `;
 }
 

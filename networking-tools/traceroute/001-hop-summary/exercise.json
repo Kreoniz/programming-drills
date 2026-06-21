@@ -1,0 +1,22 @@
+{
+  "id": "networking-tools/traceroute/001-hop-summary",
+  "title": "traceroute Hop Summary",
+  "language": "networking",
+  "track": "networking-tools",
+  "topic": "traceroute",
+  "difficulty": "intermediate",
+  "estimated_minutes": 25,
+  "tags": [
+    "traceroute",
+    "routing",
+    "latency",
+    "awk"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "node ../tests/check.mjs .",
+  "solution_check_command": "node ../tests/check.mjs .",
+  "prerequisites": []
+}

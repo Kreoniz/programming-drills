@@ -1,0 +1,5 @@
+This drill practices Windows gateway and DNS server fields for client resolver diagnosis. Networking tools are most useful when you can turn noisy command output into a small, reliable answer: which interface owns an address, which route will be used, which process listens on a port, which resolver is active, or which packet pattern explains a failure. The commands in this track use captured fixtures so the checks are deterministic and safe to run without root or live network access.
+
+Treat the fixture as output from the real utility named in the exercise. Read it before writing the command. Prefer structured output when a tool provides it, such as ip -j, and use text tools carefully when the historical utility only prints human-oriented output. Keep ordering explicit with sort, ORDER BY-style thinking, or stable field selection. Avoid hard-coding the final answer directly; the checker looks for the relevant utility or parsing technique.
+
+The goal is practical fluency: fast diagnosis, reproducible notes, and shell snippets that survive whitespace, multiple interfaces, and ordinary production variation.

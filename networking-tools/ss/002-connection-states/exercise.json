@@ -1,0 +1,22 @@
+{
+  "id": "networking-tools/ss/002-connection-states",
+  "title": "ss Connection State Counts",
+  "language": "networking",
+  "track": "networking-tools",
+  "topic": "ss",
+  "difficulty": "intermediate",
+  "estimated_minutes": 25,
+  "tags": [
+    "ss",
+    "tcp",
+    "states",
+    "awk"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "node ../tests/check.mjs .",
+  "solution_check_command": "node ../tests/check.mjs .",
+  "prerequisites": []
+}

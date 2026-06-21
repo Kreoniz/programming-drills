@@ -1,0 +1,10 @@
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>
+        RX packets 1000  bytes 90000 (90.0 KB)
+        RX errors 2  dropped 4  overruns 0  frame 0
+        TX packets 800  bytes 70000 (70.0 KB)
+        TX errors 0  dropped 1 overruns 0  carrier 0  collisions 0
+wlan0: flags=4099<UP,BROADCAST,MULTICAST>
+        RX packets 10  bytes 1000
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 8  bytes 900
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0

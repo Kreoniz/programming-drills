@@ -6,7 +6,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const trackRoots = ["go", "ts-react", "shell-tools"];
+const trackRoots = ["go", "ts-react", "shell-tools", "networking-tools"];
 const goCache = path.join(root, ".cache", "go-build");
 const goTmp = path.join(root, ".cache", "go-tmp");
 mkdirSync(goCache, { recursive: true });

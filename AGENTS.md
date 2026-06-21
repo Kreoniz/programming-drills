@@ -7,6 +7,7 @@ Build and maintain a serious local programming drill system for Go foundations a
 - `go/`: Go drill tracks from foundation through architecture.
 - `ts-react/`: advanced TypeScript, React architecture, performance, testing, bundlers, microfrontends, monorepo, and design-system drills.
 - `shell-tools/`: command-line drills for `rg`, `sed`, `awk`, `jq`, `xargs`, and `sqlite3`.
+- `networking-tools/`: networking drills for `ip`, `ifconfig`, `ipconfig`, `ss`, DNS, ping/traceroute, curl, tcpdump, neighbor tables, firewall output, NetworkManager, ethtool, and sysctl.
 - `tools/`: drill runner, verifier, generated reports, and authoring helpers.
 - `docs/`: roadmaps and authoring/checking documentation.
 - Root docs: `README.md`, `backlog.md`, and `TOMORROW.md`.
@@ -21,6 +22,7 @@ Every exercise needs `exercise.json`, `THEORY.md` with 100-250 words, `TASK.md`,
 - `pnpm drill:verify`
 - `pnpm drill:verify:starters`
 - `pnpm drill:check:shell`
+- `pnpm drill:check:net`
 
 ## Validation Requirements
 The verifier checks metadata shape, required files, theory length, checker presence, and all reference solution commands. It writes `tools/verify-report.json` and exits nonzero on broken drills.

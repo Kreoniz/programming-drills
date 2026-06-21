@@ -1,0 +1,22 @@
+{
+  "id": "networking-tools/tcpdump/002-dns-queries",
+  "title": "tcpdump DNS Query Names",
+  "language": "networking",
+  "track": "networking-tools",
+  "topic": "tcpdump",
+  "difficulty": "intermediate",
+  "estimated_minutes": 25,
+  "tags": [
+    "tcpdump",
+    "dns",
+    "packets",
+    "awk"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "node ../tests/check.mjs .",
+  "solution_check_command": "node ../tests/check.mjs .",
+  "prerequisites": []
+}

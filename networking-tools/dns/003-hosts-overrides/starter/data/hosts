@@ -1,0 +1,4 @@
+127.0.0.1 localhost
+# lab overrides
+192.168.10.20 api.local api
+192.168.10.21 db.local postgres.local

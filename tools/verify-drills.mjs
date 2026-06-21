@@ -6,7 +6,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const trackRoots = ["go", "ts-react", "shell-tools"];
+const trackRoots = ["go", "ts-react", "shell-tools", "networking-tools"];
 const checkStarters = process.argv.includes("--check-starters");
 const goCache = path.join(root, ".cache", "go-build");
 const goTmp = path.join(root, ".cache", "go-tmp");
@@ -113,6 +113,7 @@ report.totals.exercises = exercises.length;
 report.totals.go = exercises.filter(e => e.meta.language === "go").length;
 report.totals.tsReact = exercises.filter(e => e.meta.language === "ts-react").length;
 report.totals.shellTools = exercises.filter(e => e.meta.language === "shell").length;
+report.totals.networkingTools = exercises.filter(e => e.meta.language === "networking").length;
 report.totals.failures = report.failures.length;
 writeFileSync(path.join(root, "tools", "verify-report.json"), JSON.stringify(report, null, 2) + "\n");
 
@@ -124,5 +125,5 @@ if (report.failures.length) {
   process.exit(1);
 }
 
-console.log(`Verified ${report.totals.exercises} drills: ${report.totals.go} Go, ${report.totals.tsReact} TS/React, ${report.totals.shellTools} shell-tools.`);
+console.log(`Verified ${report.totals.exercises} drills: ${report.totals.go} Go, ${report.totals.tsReact} TS/React, ${report.totals.shellTools} shell-tools, ${report.totals.networkingTools} networking-tools.`);
 if (checkStarters) console.log("Starter checks were run and failed as expected.");

@@ -1,0 +1,21 @@
+{
+  "id": "networking-tools/ethtool/001-link-speed-duplex",
+  "title": "ethtool Speed and Duplex",
+  "language": "networking",
+  "track": "networking-tools",
+  "topic": "ethtool",
+  "difficulty": "intermediate",
+  "estimated_minutes": 25,
+  "tags": [
+    "ethtool",
+    "ethernet",
+    "link"
+  ],
+  "theory_file": "THEORY.md",
+  "task_file": "TASK.md",
+  "starter_path": "starter",
+  "solution_path": "solution",
+  "check_command": "node ../tests/check.mjs .",
+  "solution_check_command": "node ../tests/check.mjs .",
+  "prerequisites": []
+}

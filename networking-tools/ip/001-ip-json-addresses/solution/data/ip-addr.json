@@ -1,0 +1,1 @@
+[{"ifname":"lo","operstate":"UNKNOWN","addr_info":[{"family":"inet","local":"127.0.0.1","prefixlen":8}]},{"ifname":"eth0","operstate":"UP","addr_info":[{"family":"inet","local":"192.168.10.23","prefixlen":24},{"family":"inet6","local":"fe80::1","prefixlen":64}]},{"ifname":"wlan0","operstate":"DOWN","addr_info":[{"family":"inet","local":"10.20.0.8","prefixlen":16}]}]
